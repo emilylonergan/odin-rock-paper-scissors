@@ -27,6 +27,10 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound(playerSelection, computerSelection));
 
-let playerMove = prompt("What move will you choose?");
+let playerMove = prompt("What's your move?");
 
+function game() {
+    playRound(playerSelection, computerSelection);
 
+    
+}
