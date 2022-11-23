@@ -5,6 +5,7 @@ function getComputerChoice() {
 }
 
 let playerSelection = prompt("What's your move?");
+
 let computerSelection = getComputerChoice();
 
 console.log("Computer chooses: " + computerSelection);
