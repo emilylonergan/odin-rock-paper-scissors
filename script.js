@@ -5,7 +5,6 @@ function getComputerChoice() {
 }
 
 
-
 function playRound() {
 
     let playerSelection = prompt("What's your move?");
@@ -22,7 +21,7 @@ function playRound() {
     } else if (playerSelection == moves[1] && computerSelection == moves[0]) {
         return "Yes!"; 
     } else if (playerSelection == moves[2] && computerSelection == moves[1]) {
-        return "Got it!"
+        return "Got it!";
     } else {
         return "Dang";
     }
@@ -55,6 +54,7 @@ function score(playerScore) {
         console.log("You lost. Better luck next time!");
     }
 }
+
 
 game();
 
