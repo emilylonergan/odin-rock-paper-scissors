@@ -14,7 +14,9 @@ playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).to
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "A draw!";
-    } else if (playerSelection == moves[0] && computerSelection == moves[2]) {
+    } else if ((playerSelection == moves[0] && computerSelection == moves[2])
+            || (playerSelection == moves[1] && computerSelection == moves[0])
+            || (playerSelection == moves[2] && computerSelection == moves[1])) {
         return "You win!";
     } else {
         return "You lose!";
@@ -22,3 +24,5 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+
