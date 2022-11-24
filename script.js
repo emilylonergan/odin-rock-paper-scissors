@@ -14,7 +14,7 @@ function playRound(playerSelection, computerSelection) {
         console.log("Computer chose: " + computerSelection);
 
     if (playerSelection == computerSelection) {
-        console.log("A draw!");
+        console.log("A draw");
     } else if (playerSelection == moves[0] && computerSelection == moves[2]) {
         playerScore++;
         console.log("Nice one!");
@@ -29,8 +29,6 @@ function playRound(playerSelection, computerSelection) {
         console.log("Dang");
     }
 }
-
-console.log(playRound());
 
 var playerScore = 0;
 var computerScore = 0;
