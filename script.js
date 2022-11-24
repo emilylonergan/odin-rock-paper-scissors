@@ -48,7 +48,7 @@ function game() {
 
    
 function score(playerScore) {
-    if (playerScore >= 3) {
+    if (playerScore > computerScore) {
         console.log("Congrats, you won!");
     } else {
         console.log("You lost. Better luck next time!");
