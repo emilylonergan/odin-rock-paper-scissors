@@ -11,6 +11,7 @@ function playRound(playerSelection, computerSelection) {
 
         playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
 
+        console.log("You chose: " + playerSelection);
         console.log("Computer chose: " + computerSelection);
 
     if (playerSelection == computerSelection) {
