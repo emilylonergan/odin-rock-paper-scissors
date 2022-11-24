@@ -34,7 +34,7 @@ var playerScore = 0;
 var computerScore = 0;
 
 function game() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
         playRound();
     }
         
