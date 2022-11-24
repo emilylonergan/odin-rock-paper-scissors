@@ -5,15 +5,13 @@ function getComputerChoice() {
 }
 
 
-function playRound() {
+function playRound(playerSelection, computerSelection) {
+    var playerSelection = prompt("What's your move?");
+        var computerSelection = getComputerChoice();
 
-    let playerSelection = prompt("What's your move?");
-    let computerSelection = getComputerChoice();
+        playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
 
-    console.log("Computer chooses: " + computerSelection);
-
-    playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
-    
+        console.log("Computer chose: " + computerSelection);
     if (playerSelection == computerSelection) {
         return "A draw!";
     } else if (playerSelection == moves[0] && computerSelection == moves[2]) {
@@ -29,29 +27,28 @@ function playRound() {
 
 console.log(playRound());
 
-let playerScore = 0;
-let computerScore = 0;
+var playerScore = 0;
+var computerScore = 0;
 
 function game() {
-    playRound();
+    for (let i = 0; i < 4; i++) {
+        playRound();
 
-    for (let i = 0; i < 5; i++) {
-        if ((playerSelection == moves[0] && computerSelection == moves[2])
-        || (playerSelection == moves[1] && computerSelection == moves[0]) 
-        || (playerSelection == moves[2] && computerSelection == moves[1])) {
-            playerScore++;
-        } else {
-            computerScore++;
+        for (let i = 0; i < 5; i++) {
+            if ((playerSelection == moves[0] && computerSelection == moves[2])
+            || (playerSelection == moves[1] && computerSelection == moves[0]) 
+            || (playerSelection == moves[2] && computerSelection == moves[1])) {
+                playerScore++;
+            } else {
+                computerScore++;
+            }
         }
-    }
-}
-
-   
-function score(playerScore) {
-    if (playerScore > computerScore) {
-        console.log("Congrats, you won!");
-    } else {
-        console.log("You lost. Better luck next time!");
+        
+        if (playerScore > computerScore) {
+            console.log("Congrats, you won!");
+        } else {
+            console.log("You lost. Better luck next time!");
+        }
     }
 }
 
