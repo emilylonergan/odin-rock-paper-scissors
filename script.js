@@ -14,19 +14,19 @@ function playRound(playerSelection, computerSelection) {
         console.log("Computer chose: " + computerSelection);
 
     if (playerSelection == computerSelection) {
-        return "A draw!";
+        console.log("A draw!");
     } else if (playerSelection == moves[0] && computerSelection == moves[2]) {
         playerScore++;
-        return "Nice one!";
+        console.log("Nice one!");
     } else if (playerSelection == moves[1] && computerSelection == moves[0]) {
         playerScore++;
-        return "Yes!"; 
+        console.log("Yes!"); 
     } else if (playerSelection == moves[2] && computerSelection == moves[1]) {
         playerScore++;
-        return "Got it!";
+        console.log("Got it!");
     } else {
         computerScore++;
-        return "Dang";
+        console.log("Dang");
     }
 }
 
