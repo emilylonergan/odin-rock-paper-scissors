@@ -4,9 +4,8 @@ function getComputerChoice() {
     return moves[Math.floor(Math.random() * moves.length)];
 }
 
-
 function playRound(playerSelection, computerSelection) {
-    var playerSelection = prompt("What's your move?");
+        var playerSelection = prompt("What's your move?");
         var computerSelection = getComputerChoice();
 
         playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
@@ -38,17 +37,14 @@ function game() {
     for (let i = 0; i < 5; i++) {
         playRound();
     }
-        
         if (playerScore > computerScore) {
             console.log("Congrats, you won the game!");
         } if (playerScore == computerScore) {
             console.log("The game is a draw!");
         }   else {
             console.log("You lost the game. Better luck next time!");
-        
     }
 }
-
 
 game();
 
