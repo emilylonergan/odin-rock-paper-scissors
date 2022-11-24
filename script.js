@@ -40,9 +40,11 @@ function game() {
     }
         
         if (playerScore > computerScore) {
-            console.log("Congrats, you won!");
-        } else {
-            console.log("You lost. Better luck next time!");
+            console.log("Congrats, you won the game!");
+        } if (playerScore == computerScore) {
+            console.log("The game is a draw!");
+        }   else {
+            console.log("You lost the game. Better luck next time!");
         
     }
 }
